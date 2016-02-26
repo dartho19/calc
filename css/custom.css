@@ -1,4 +1,74 @@
-.col-xs-10 {
-    background: #555;
-    border-radius: 2px;
+/*Page style to accomodate calculator*/
+.page {
+    margin-left: 5px;
+    margin-top: 5px;
+    width: 305px;
+    height: 400px;
+    overflow-y: hidden; //hide side scrollbar
+    min-height: 400px;
+    min-width: 300px;
+    border-color: red;
+    border: 3px solid dimgray;
+    border-radius: 8px;
+
+}
+
+/*main container style*/
+.container-fluid {
+        background-color: whitesmoke;
+        z-index: 0;
+}
+
+/*Custom grid classes */
+.column {
+    background-color: whitesmoke;
+    border-radius: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.row {
+    padding-left: 4px;
+    padding-right: 0px;
+    padding-top: 4px;
+}
+
+/*Class for custom squared buttons*/
+.btn-sq-lg {
+    width: 70px !important; /*force the button to be squared*/
+    height: 70px !important;
+
+    font-size: 30px;
+    font-family: verdana, sans-serif;
+    font-weight: lighter;
+}
+
+.digit {
+    background-color: white; /*button style*/
+    border-radius: 10px;
+    border: 3px solid darkgray;
+}
+.equal {
+    background-color: lightcyan ; /*button style*/
+    border-radius: 5px;
+    border: 3px solid gainsboro;
+}
+.operand {
+    background-color: FED17F; /*button style*/
+    border-radius: 20px;
+    border: 1px solid dimgray;
+}
+
+/*Class for the result panel*/
+.panel-default {
+    width: 218px;
+    height: 70px;
+
+    background-color: honeydew; /*panel style*/
+    border: 5px double gainsboro;
+    border-radius: 3px;
+    font-size: 28px;
+    font-family: verdana, sans-serif;
+    font-weight: lighter;
+    text-align: right;
 }
