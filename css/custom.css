@@ -8,7 +8,7 @@
     min-height: 400px;
     min-width: 300px;
     border-color: red;
-    border: 3px solid darkslategray;
+    border: 3px solid dimgray;
     border-radius: 8px;
 
 }
@@ -45,18 +45,18 @@
 
 .digit {
     background-color: white; /*button style*/
-    border-radius: 5px;
-    border: 2px solid darkslategray;
+    border-radius: 10px;
+    border: 3px solid darkgray;
 }
 .equal {
-    background-color: cadetblue; /*button style*/
+    background-color: lightcyan ; /*button style*/
     border-radius: 5px;
     border: 3px solid gainsboro;
 }
 .operand {
-    background-color: lightgrey; /*button style*/
+    background-color: FED17F; /*button style*/
     border-radius: 20px;
-    border: 3px solid darkslategray;
+    border: 1px solid dimgray;
 }
 
 /*Class for the result panel*/
@@ -65,7 +65,7 @@
     height: 70px;
 
     background-color: honeydew; /*panel style*/
-    border: 2px double cadetblue;
+    border: 5px double gainsboro;
     border-radius: 3px;
     font-size: 28px;
     font-family: verdana, sans-serif;
