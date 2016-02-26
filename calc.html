@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta charset="utf-8">
 
+        <!-- javascript inclusion -->
+        <script src="js/calc.js"></script>
+
         <title>Simple Calculator</title>
 
         <!-- Styles -->
@@ -21,13 +24,13 @@
             <div class="col-xs-9 column">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <p>0</p>
+                        <p id="screen">0</p>
                     </div>
                 </div>
             </div>
 
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg equal">
+                <button onclick="updateScreen()" class="btn btn-sq-lg equal">
                     =
                 </button>
             </div>
@@ -36,17 +39,17 @@
     <!--2nd row:     7, 8, 9, DIV   -->
         <div class="row">
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg digit">
+                <button class="btn btn-sq-lg digit" onclick="createNumber(7)">
                     7
                 </button>
             </div>
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg digit">
+                <button class="btn btn-sq-lg digit" onclick="createNumber(8)">
                     8
                 </button>
             </div>
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg digit">
+                <button class="btn btn-sq-lg digit" onclick="createNumber(9)">
                     9
                 </button>
             </div>
@@ -60,17 +63,17 @@
     <!--third row:  4, 5, 6, MULT   -->
         <div class="row">
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg digit">
+                <button class="btn btn-sq-lg digit" onclick="createNumber(4)">
                     4
                 </button>
             </div>
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg digit">
+                <button class="btn btn-sq-lg digit" onclick="createNumber(5)">
                     5
                 </button>
             </div>
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg digit">
+                <button class="btn btn-sq-lg digit" onclick="createNumber(6)">
                     6
                 </button>
             </div>
@@ -84,17 +87,17 @@
     <!--fourth row:     1, 2, 3, MIN    -->
         <div class="row">
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg digit digit">
+                <button class="btn btn-sq-lg digit" onclick="createNumber(1)">
                     1
                 </button>
             </div>
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg digit">
+                <button class="btn btn-sq-lg digit " onclick="createNumber(2)">
                     2
                 </button>
             </div>
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg digit">
+                <button class="btn btn-sq-lg digit" onclick="createNumber(3)">
                     3
                 </button>
             </div>
@@ -112,7 +115,7 @@
             </div>
 
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg digit">
+                <button class="btn btn-sq-lg digit" onclick="createNumber(0)">
                     0
                 </button>
             </div>
@@ -120,7 +123,7 @@
             <div class="col-xs-3 column "></div>
 
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg operand">
+                <button onclick="updateExpression('sum')" class="btn btn-sq-lg operand" >
                     +
                 </button>
             </div>
