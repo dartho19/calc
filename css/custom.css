@@ -37,6 +37,7 @@
 .btn-sq-lg {
     width: 70px !important; /*force the button to be squared*/
     height: 70px !important;
+    outline: 0 !important; /*remove outline when clicked*/
 
     font-size: 30px;
     font-family: verdana, sans-serif;
