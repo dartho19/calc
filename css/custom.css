@@ -54,7 +54,7 @@
     border: 3px solid gainsboro;
 }
 .operand {
-    background-color: FED17F; /*button style*/
+    background-color: orange; /*button style*/
     border-radius: 20px;
     border: 1px solid dimgray;
 }
