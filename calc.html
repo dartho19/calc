@@ -19,7 +19,7 @@
 <!-- using bootstrap's grid to fit the elements of the calculator -->
 
     <body class="container-fluid">
-    <!--first row: RESULT, EQUAL-->
+    <!--first row: Screen , EQUAL-->
         <div class="row">
             <div class="col-xs-9 column">
                 <div class="panel panel-default">
@@ -39,22 +39,22 @@
     <!--2nd row:     7, 8, 9, DIV   -->
         <div class="row">
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg digit" onclick="createNumber(7)">
+                <button onclick="createNumber(7)" class="btn btn-sq-lg digit">
                     7
                 </button>
             </div>
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg digit" onclick="createNumber(8)">
+                <button onclick="createNumber(8)" class="btn btn-sq-lg digit" >
                     8
                 </button>
             </div>
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg digit" onclick="createNumber(9)">
+                <button onclick="createNumber(9)" class="btn btn-sq-lg digit">
                     9
                 </button>
             </div>
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg operand">
+                <button onclick="updateExpression('div')" class="btn btn-sq-lg operand">
                     ÷
                 </button>
             </div>
@@ -63,22 +63,22 @@
     <!--third row:  4, 5, 6, MULT   -->
         <div class="row">
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg digit" onclick="createNumber(4)">
+                <button  onclick="createNumber(4)" class="btn btn-sq-lg digit">
                     4
                 </button>
             </div>
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg digit" onclick="createNumber(5)">
+                <button  onclick="createNumber(5)" class="btn btn-sq-lg digit">
                     5
                 </button>
             </div>
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg digit" onclick="createNumber(6)">
+                <button onclick="createNumber(6)" class="btn btn-sq-lg digit">
                     6
                 </button>
             </div>
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg operand">
+                <button onclick="updateExpression('prod')" class="btn btn-sq-lg operand">
                     x
                 </button>
             </div>
@@ -87,22 +87,22 @@
     <!--fourth row:     1, 2, 3, MIN    -->
         <div class="row">
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg digit" onclick="createNumber(1)">
+                <button onclick="createNumber(1)" class="btn btn-sq-lg digit">
                     1
                 </button>
             </div>
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg digit " onclick="createNumber(2)">
+                <button onclick="createNumber(2)" class="btn btn-sq-lg digit">
                     2
                 </button>
             </div>
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg digit" onclick="createNumber(3)">
+                <button onclick="createNumber(3)" class="btn btn-sq-lg digit">
                     3
                 </button>
             </div>
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg operand">
+                <button onclick="updateExpression('sub')" class="btn btn-sq-lg operand">
                     -
                 </button>
             </div>
@@ -110,12 +110,10 @@
 
     <!--fifth row:   blank, 0, blank, ADD    -->
         <div class="row">
-            <div class="col-xs-3 column info">
-            <!--<br><br><a href="https://github.com/"><h6><small>GitHub</small></h6></a> -->
-            </div>
+            <div class="col-xs-3 column info"></div>
 
             <div class="col-xs-3 column">
-                <button class="btn btn-sq-lg digit" onclick="createNumber(0)">
+                <button onclick="createNumber(0)" class="btn btn-sq-lg digit">
                     0
                 </button>
             </div>
