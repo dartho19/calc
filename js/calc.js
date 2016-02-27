@@ -1,7 +1,9 @@
 /* Global Variables */
-var number=0; //the number that has been inserted
+var number=""; //the number that has been inserted
 var expression=""; //the total expression that has been inserted
 var result=0; //the value to display on screen
+var MAX_LEGTH=10; //maximum amout of digit that screen can handle
+var len=0; //actual length of the current number
 
 /*
  This function is called when a digit button is clicked,
@@ -10,7 +12,10 @@ var result=0; //the value to display on screen
     i.e.: click on "1", click on "9" => number is equal to "19"
 */
 function createNumber(digit) {
-    number = number + digit;
+    if(len < MAX_LEGTH){ //accept new digit
+        number = number + digit;
+        len++;
+    }
     document.getElementById('screen').innerHTML = number;
 }
 
@@ -23,13 +28,14 @@ function createNumber(digit) {
 function updateExpression(operand) {
     //concatenate the number and the operand within the expression
     expression = expression + number + " " + operand + " ";
-    //and than reset number to allow a new number insertion
+    //and than reset number and len to allow a new number insertion
     number="";
+    len=0;
 }
 
 /*
  Called when the "equal" button is pressed, it allows the dislay of the
- result of the expression's evaluation.
+ result of the expression's evaluation or the screen's default value, 0
 */
 function updateScreen() {
 
@@ -41,24 +47,25 @@ function updateScreen() {
             result = eval(expression);
         } catch (e) {   //catch error if expression is incorrect
             if (e instanceof SyntaxError) {
-                document.getElementById('screen').innerHTML = "Syntax Error";
+                document.getElementById('screen').innerHTML = "Error";
                 resetValues();
                 return;
             }
         }
         //if expression has been correctly evaluated print the result
         document.getElementById('screen').innerHTML = result.toPrecision(2);
-    }else{
+    }else if( number!="" ){
         //if there isn't an expression, just display the current number
         document.getElementById('screen').innerHTML = number;
-    }
+    }else document.getElementById('screen').innerHTML = "0"; //default screen value
 
-    //before returning reset default values:
+    //before returning reset variables to default value:
     resetValues();
 }
 
 function resetValues(){
-    number=0; //reset number
+    number=""; //reset number
     expression=""; //reset expression
     result=0; //reset result
+    len=0;
 }
