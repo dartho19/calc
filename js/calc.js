@@ -51,7 +51,7 @@ function updateScreen() {
         expression = expression + number; //inserting last number
         result = eval(expression);
 
-        document.getElementById('screen').innerHTML = result.toFixed(2);
+        document.getElementById('screen').innerHTML = result.toPrecision(2);
 
     }else{
         //there isn't an expression, display the number
